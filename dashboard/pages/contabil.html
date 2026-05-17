@@ -1,0 +1,53 @@
+<!-- HTML Base omitido para brevidade, foco no main-content -->
+<main class="main-content">
+    <header class="page-header">
+        <h1>Módulo Contábil</h1>
+        <div>
+            <button class="btn btn-outline">Gerar DRE</button>
+            <button class="btn">Balancete</button>
+        </div>
+    </header>
+
+    <div class="kpi-grid">
+        <div class="card kpi-card">
+            <p>Ativo Total</p>
+            <h3>R$ 4.520.000,00</h3>
+        </div>
+        <div class="card kpi-card">
+            <p>Passivo</p>
+            <h3>R$ 1.200.000,00</h3>
+        </div>
+        <div class="card kpi-card">
+            <p>Patrimônio Líquido</p>
+            <h3>R$ 3.320.000,00</h3>
+        </div>
+        <div class="card kpi-card">
+            <p>Resultado do Exercício</p>
+            <h3 style="color: #2e7d32">R$ 450.000,00</h3>
+        </div>
+    </div>
+
+    <div class="card filter-section">
+        <div class="filter-grid">
+            <select id="filtro-competencia"><option>10/2026</option></select>
+            <select id="filtro-centro"><option>Todos os Centros (Consolidado)</option></select>
+            <input type="text" placeholder="Conta (Ex: 1.1.01)">
+        </div>
+    </div>
+
+    <div class="card table-container">
+        <h3>Razão Contábil Analítico</h3>
+        <table id="contabil-table">
+            <thead>
+                <tr>
+                    <th>Conta</th>
+                    <th>Descrição</th>
+                    <th>Débito</th>
+                    <th>Crédito</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody id="contabil-tbody"></tbody>
+        </table>
+    </div>
+</main>

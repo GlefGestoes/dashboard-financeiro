@@ -1,0 +1,47 @@
+<!-- HTML Base (mesmo do dashboard, variando o main-content) -->
+<main class="main-content">
+    <header class="page-header">
+        <h1>Gestão Financeira</h1>
+        <button class="btn">+ Novo Lançamento</button>
+    </header>
+
+    <div class="card filter-section">
+        <div class="filter-grid">
+            <input type="text" placeholder="Buscar Cliente/Fornecedor" id="search-nome">
+            <select id="filtro-status">
+                <option value="">Todos os Status</option>
+                <option value="Pago">Pago</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Vencido">Vencido</option>
+            </select>
+            <input type="date" id="data-inicio" title="Data Inicial">
+            <input type="date" id="data-fim" title="Data Final">
+            <button class="btn btn-outline" id="btn-filtrar">Filtrar</button>
+            <button class="btn btn-outline" id="btn-export">Exportar PDF</button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="pagar">Contas a Pagar</button>
+        <button class="tab-btn" data-tab="receber">Contas a Receber</button>
+    </div>
+
+    <div class="card table-container">
+        <table id="finance-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Documento</th>
+                    <th>Entidade</th>
+                    <th>Centro de Custo</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="finance-tbody">
+                <!-- Preenchido via JS -->
+            </tbody>
+        </table>
+    </div>
+</main>

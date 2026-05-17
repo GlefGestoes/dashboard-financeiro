@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Reutilizável -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box" style="width:30px;height:30px;background:var(--burgundy);border-radius:4px;"></div>
+                <h2>ERP Finance</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active"><i class="icon-render" data-icon="dash"></i><span>Dashboard</span></a></li>
+                <li><a href="financeiro.html"><i class="icon-render" data-icon="fin"></i><span>Financeiro</span></a></li>
+                <li><a href="contabil.html"><i class="icon-render" data-icon="cont"></i><span>Contábil</span></a></li>
+                <li style="margin-top:auto"><a href="login.html"><i class="icon-render" data-icon="logout"></i><span>Sair</span></a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Dashboard Financeiro</h1>
+                    <p class="text-secondary">Visão geral da empresa</p>
+                </div>
+                <button class="btn btn-outline" id="theme-toggle">Alternar Tema</button>
+            </header>
+
+            <!-- Cards Resumo -->
+            <div class="kpi-grid">
+                <div class="card kpi-card">
+                    <p>Saldo Atual</p>
+                    <h3 id="kpi-saldo" class="skeleton">R$ 0,00</h3>
+                </div>
+                <div class="card kpi-card">
+                    <p>Receitas (Mês)</p>
+                    <h3 id="kpi-receitas" class="skeleton" style="color: #2e7d32">R$ 0,00</h3>
+                </div>
+                <div class="card kpi-card">
+                    <p>Despesas (Mês)</p>
+                    <h3 id="kpi-despesas" class="skeleton" style="color: var(--burgundy)">R$ 0,00</h3>
+                </div>
+                <div class="card kpi-card">
+                    <p>Lucro Líquido</p>
+                    <h3 id="kpi-lucro" class="skeleton">R$ 0,00</h3>
+                </div>
+            </div>
+
+            <!-- Gráficos e Tabelas (Grid) -->
+            <div class="dashboard-grid">
+                <div class="card chart-container">
+                    <h3>Fluxo de Caixa Mensal</h3>
+                    <div class="mock-chart skeleton" id="chart-fluxo"></div>
+                </div>
+                <div class="card table-wrapper">
+                    <h3>Últimos Lançamentos</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr><th>Data</th><th>Descrição</th><th>Valor</th></tr>
+                            </thead>
+                            <tbody id="dash-table-body">
+                                <tr><td class="skeleton">00/00</td><td class="skeleton">Carregando</td><td class="skeleton">0,00</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/theme.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
